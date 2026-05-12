@@ -23,7 +23,7 @@ app.use((req, res, next) => {
   if (req.method === "POST") {
     console.log("Body:", JSON.stringify(req.body, null, 2));
   }
-  
+
   res.on("finish", () => {
     const duration = Date.now() - start;
     console.log(`Response: ${res.statusCode} (${duration}ms)`);
@@ -77,6 +77,34 @@ app.get("/privacy", (_req, res) => {
       <div class="footer">
         © 2026 Quran AI Team. Contact: support@islamicai.quran
       </div>
+    </body>
+    </html>
+  `);
+});
+
+app.get("/delete-account", (_req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Delete Account - Quran AI</title>
+      <style>
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+        h1 { color: #dc2626; }
+        .card { border: 1px solid #eee; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .btn { display: inline-block; background: #dc2626; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <h1>Delete Your Account</h1>
+        <p>We are sorry to see you go. If you delete your account, all your bookmarks and progress will be permanently removed.</p>
+        <p>To request account deletion, please click the button below to email our support team. We will process your request within 48 hours.</p>
+        <a href="mailto:support@islamicai.quran?subject=Account Deletion Request" class="btn">Request Deletion</a>
+      </div>
+      <p style="margin-top: 30px; color: #777; font-size: 14px;">© 2026 Quran AI Team</p>
     </body>
     </html>
   `);
