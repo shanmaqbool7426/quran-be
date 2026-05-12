@@ -12,5 +12,12 @@
     "name": "Ali Azam",
     "passwordHash": "$2b$12$FkZFLF4oWqKH5AsUqy9NBeg4OBOAhRPBr1cUHPVztAuntuaU5Vi4C",
     "createdAt": "2026-05-11T20:47:08.755Z"
+  },
+  {
+    "id": "1193124e-d382-4b95-b34c-a5178645b907",
+    "email": "shanmaqbool123456@gmail.com",
+    "name": "Shan",
+    "passwordHash": "$2b$12$vkANtp4mzxhIcUKmR34k.O4VZZSvXkzvCGDUmb7yUu8wQ7tu/qXby",
+    "createdAt": "2026-05-12T19:43:51.380Z"
   }
 ]
