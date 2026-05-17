@@ -72,7 +72,7 @@ aiRouter.post("/recitation", async (req, res) => {
     const openai = getOpenAI();
     const transcription = await openai.audio.transcriptions.create({
       file: createReadStream(tmpPath) as any,
-      model: "whisper-1",
+      model: config.openaiBaseUrl?.includes("groq") ? "whisper-large-v3-turbo" : "whisper-1",
       language: "ar",
       response_format: "text",
     });
