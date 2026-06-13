@@ -6,6 +6,7 @@ import express from "express";
 import { config } from "./config.js";
 import { aiRouter } from "./routes/ai.js";
 import { authRouter } from "./routes/auth.js";
+import { analyticsRouter } from "./routes/analytics.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -112,6 +113,7 @@ app.get("/delete-account", (_req, res) => {
 
 app.use("/api/auth", authRouter);
 app.use("/api/ai", aiRouter);
+app.use("/api/analytics", analyticsRouter);
 
 app.use((_req, res) => {
   res.status(404).json({ error: "Not found" });
